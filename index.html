@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090812">
+<meta name="description" content="VEXOR CLIENT — концепция Minecraft Java клиента с неоновым интерфейсом.">
+<title>VEXOR CLIENT — Enter the Vexor World</title>
+<style>
+:root{color-scheme:dark;--bg:#090812;--panel:#12111f;--line:#29243f;--purple:#b277ff;--cyan:#52e6ff;--muted:#aaa5bf;--white:#f8f6ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#48207855,transparent 45%),var(--bg);color:var(--white);font:16px/1.6 Inter,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#090812eF;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:4px;font-size:23px}.brand b{color:var(--purple)}nav{display:flex;gap:22px;flex-wrap:wrap}nav a{font-size:14px;color:var(--muted)}nav a:hover{color:var(--cyan)}
+.hero{text-align:center;padding:112px 0 88px}.eyebrow{font-size:12px;letter-spacing:4px;color:var(--cyan);font-weight:800}.hero h1{font-size:clamp(48px,9vw,92px);line-height:1.02;letter-spacing:-3px;margin:22px 0}.gradient{background:linear-gradient(100deg,var(--purple),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:650px;margin:0 auto;color:var(--muted);font-size:18px}.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:30px 0 16px}.btn{border:1px solid var(--line);border-radius:10px;padding:12px 19px;background:#171425;color:var(--white);font-weight:750;cursor:pointer}.btn.main{background:linear-gradient(100deg,#813ce1,#3f66d9);border-color:transparent;box-shadow:0 0 35px #8642e52b}.btn:hover{filter:brightness(1.15);transform:translateY(-1px)}.small{font-size:12px;color:#847e9d}
+section{padding:48px 0;scroll-margin-top:90px}.title{font-size:32px;line-height:1.2;margin:0 0 10px}.desc{color:var(--muted);max-width:700px;margin:0 0 26px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(145deg,#171426,#10101a);border:1px solid var(--line);border-radius:16px;padding:23px;transition:.2s}.card:hover{border-color:#8151bd;transform:translateY(-3px)}.emoji{font-size:26px}.card h3{margin:8px 0}.card p{margin:0;color:var(--muted);font-size:14px}
+.download{padding:35px;text-align:center;border:1px solid #58377a;border-radius:18px;background:radial-gradient(ellipse at top,#752bd52b,transparent 68%),#11101c}.pill{display:inline-block;border:1px solid #7042a2;background:#6836a329;padding:5px 11px;border-radius:30px;color:#dfc4ff;font-size:12px;margin:8px 0 12px}.download p{color:var(--muted);max-width:620px;margin:8px auto 16px}.updates{display:grid;gap:12px}.update{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:18px}.update small{color:var(--cyan);letter-spacing:1px}.update h3{margin:5px 0}.update p{color:var(--muted);margin:0}
+footer{margin-top:40px;border-top:1px solid var(--line);padding:25px 0;color:#89839f;font-size:13px;text-align:center}footer b{color:var(--purple)}
+@media(max-width:760px){.nav{padding:13px 0;align-items:flex-start;flex-direction:column}nav{gap:13px}.hero{padding:75px 0 55px}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.download{padding:24px 16px}.title{font-size:28px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#home">VEXOR<b>.</b></a><nav aria-label="Навигация"><a href="#features">Функции</a><a href="#downloads">Загрузки</a><a href="#updates">Обновления</a><a href="#about">О проекте</a></nav></div></header>
+<main>
+<section class="hero wrap" id="home"><div class="eyebrow">MINECRAFT JAVA CLIENT</div><h1>ENTER THE<br><span class="gradient">VEXOR WORLD.</span></h1><p class="lead">Твой стиль. Твой интерфейс. Твои настройки. Знакомься с концепцией VEXOR CLIENT — проекта с неоновым оформлением и настраиваемыми игровыми функциями.</p><div class="buttons"><a class="btn main" href="#downloads">Смотреть загрузки ↓</a><a class="btn" href="#features">Изучить функции ↗</a></div><div class="small">ПРОЕКТ В РАЗРАБОТКЕ · ПУБЛИЧНЫЙ РЕЛИЗ ЕЩЁ НЕ ГОТОВ</div></section>
+<section class="wrap" id="features"><h2 class="title">Функции клиента</h2><p class="desc">Запланированные разделы VEXOR. Возможности будут зависеть от версии Minecraft и совместимости с другими модами.</p><div class="grid">
+<article class="card"><div class="emoji">◉</div><h3>ESP</h3><p>Подсветка сущностей, цель по нику, рамки, имена и расстояния.</p></article>
+<article class="card"><div class="emoji">ϟ</div><h3>Movement</h3><p>Настройки движения, скорости и прыжков для поддерживаемых режимов.</p></article>
+<article class="card"><div class="emoji">◈</div><h3>Visuals</h3><p>FOV, яркость, прицел, камера и визуальные эффекты.</p></article>
+<article class="card"><div class="emoji">☾</div><h3>World</h3><p>Локальные пресеты неба, облака, звёзды и туман.</p></article>
+<article class="card"><div class="emoji">▤</div><h3>HUD</h3><p>FPS, координаты, пинг и настраиваемые элементы экрана.</p></article>
+<article class="card"><div class="emoji">⚙</div><h3>Settings</h3><p>Клавиши, цветовые темы, профили и сохранение настроек.</p></article>
+</div></section>
+<section class="wrap" id="downloads"><div class="download"><div class="eyebrow">VEXOR DOWNLOAD CENTER</div><h2 class="title">Загрузка клиента</h2><span class="pill">● РЕЛИЗ В РАЗРАБОТКЕ</span><p>Проверенный файл клиента пока не опубликован. Когда появится настоящая сборка, здесь будут ссылка, номер версии, совместимая версия Minecraft и инструкция по установке.</p><button id="downloadBtn" class="btn main" type="button">Скоро будет доступно</button><p id="notice" role="status" aria-live="polite"></p></div></section>
+<section class="wrap" id="updates"><h2 class="title">Обновления</h2><p class="desc">Новости разработки VEXOR CLIENT.</p><div class="updates"><article class="update"><small>ЭТАП 01 · КОНЦЕПЦИЯ</small><h3>Идея и дизайн сайта</h3><p>Выбрано название VEXOR CLIENT и определены основные вкладки интерфейса.</p></article><article class="update"><small>СЛЕДУЮЩИЙ ЭТАП</small><h3>Первая сборка</h3><p>Подготовка исходников, проверка совместимости и тестирование перед публикацией.</p></article></div></section>
+<section class="wrap" id="about"><h2 class="title">О проекте</h2><p class="desc">VEXOR CLIENT — независимый проект для Minecraft Java Edition. Не является официальным продуктом Mojang или Microsoft. На многопользовательских серверах соблюдайте правила сервера.</p></section>
+</main>
+<footer><div class="wrap"><b>VEXOR CLIENT</b><br>Независимый проект Minecraft Java Edition · Сайт в разработке</div></footer>
+<script>
+document.getElementById('downloadBtn').addEventListener('click',function(){document.getElementById('notice').textContent='Релиз ещё не опубликован. Вернись позже за настоящей ссылкой на загрузку.';});
+</script>
+</body>
+</html>
