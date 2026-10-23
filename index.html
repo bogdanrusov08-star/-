@@ -14,10 +14,48 @@ header{position:sticky;top:0;z-index:10;background:#090812ed;backdrop-filter:blu
 section{padding:44px 0;scroll-margin-top:90px}.title{font-size:32px;line-height:1.2;margin:0 0 10px}.desc{color:var(--muted);max-width:700px;margin:0 0 26px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(145deg,#171426,#10101a);border:1px solid var(--line);border-radius:16px;padding:23px;transition:.2s}.card:hover{border-color:#8151bd;transform:translateY(-3px)}.emoji{font-size:26px}.card h3{margin:8px 0}.card p{margin:0;color:var(--muted);font-size:14px}
 .download{padding:35px;text-align:center;border:1px solid #58377a;border-radius:18px;background:radial-gradient(ellipse at top,#752bd52b,transparent 68%),#11101c}.pill{display:inline-block;border:1px solid #7042a2;background:#6836a329;padding:5px 11px;border-radius:30px;color:#dfc4ff;font-size:12px;margin:8px 0 12px}.download p{color:var(--muted);max-width:620px;margin:8px auto 16px}.updates{display:grid;gap:12px}.update{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:18px}.update small{color:var(--cyan);letter-spacing:1px}.update h3{margin:5px 0}.update p{color:var(--muted);margin:0}footer{margin-top:40px;border-top:1px solid var(--line);padding:25px 0;color:#89839f;font-size:13px;text-align:center}footer b{color:var(--purple)}
 @media(max-width:760px){.nav{padding:13px 0;align-items:flex-start;flex-direction:column}nav{gap:13px}.hero{padding:70px 0 55px}.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.download{padding:24px 16px}.title{font-size:28px}}
+
+/* Added activity table — existing page styling remains unchanged */
+.activity-section{width:min(1080px,calc(100% - 36px));margin:20px auto 0;padding:18px;border:1px solid #29243f;border-radius:18px;background:linear-gradient(135deg,#151323,#0e0d18)}
+.activity-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.activity-title{margin:0;font-size:13px;letter-spacing:2px;font-weight:900;color:#f8f6ff}
+.activity-subtitle{font-size:11px;color:#aaa5bf}
+.activity-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.activity-card{min-width:0;display:flex;align-items:center;gap:12px;padding:14px;border:1px solid #302943;border-radius:13px;background:#100f1b;transition:border-color .2s,transform .2s}
+.activity-card:hover{border-color:#b277ff;transform:translateY(-2px)}
+.activity-image{width:54px;height:54px;flex:0 0 54px;display:flex;align-items:center;justify-content:center;border-radius:11px;background:#201a31;overflow:hidden}
+.activity-image img{width:34px;height:34px;object-fit:contain}
+.activity-image.game img{width:100%;height:100%;object-fit:cover}
+.activity-copy{min-width:0}
+.activity-copy h3{margin:0 0 3px;font-size:14px;line-height:1.3;color:#f8f6ff}
+.activity-copy p{margin:0;font-size:12px;line-height:1.4;color:#aaa5bf}
+.activity-dot{display:inline-block;width:7px;height:7px;margin-right:5px;border-radius:50%;background:#52e6ff;box-shadow:0 0 8px #52e6ff;vertical-align:1px}
+@media(max-width:680px){.activity-section{padding:13px}.activity-grid{grid-template-columns:1fr}.activity-card{padding:11px}.activity-top{align-items:flex-start;flex-direction:column}.activity-image{width:46px;height:46px;flex-basis:46px}}
+
 </style>
 </head>
 <body>
 <header><div class="wrap nav"><a class="brand" href="#home">VEXOR<b>.</b></a><nav aria-label="Навигация"><a href="#features">Функции</a><a href="#downloads">Загрузки</a><a href="#updates">Обновления</a><a href="#about">О проекте</a></nav></div></header>
+<section class="activity-section" id="activity-table" aria-label="Мои активности">
+  <div class="activity-top">
+    <h2 class="activity-title">МОИ АКТИВНОСТИ</h2>
+    <span class="activity-subtitle"><span class="activity-dot"></span>МОЙ ЦИФРОВОЙ МИР</span>
+  </div>
+  <div class="activity-grid">
+    <a class="activity-card" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+      <div class="activity-image"><img src="https://cdn.simpleicons.org/youtube/FF0033" alt="Логотип YouTube"></div>
+      <div class="activity-copy"><h3>Смотрю YouTube</h3><p>Видео и новые идеи</p></div>
+    </a>
+    <a class="activity-card" href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer">
+      <div class="activity-image game"><img src="https://cdn.simpleicons.org/minecraft/62B47A" alt="Логотип Minecraft"></div>
+      <div class="activity-copy"><h3>Играю в игру</h3><p>Minecraft и другие игры</p></div>
+    </a>
+    <a class="activity-card" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">
+      <div class="activity-image"><img src="https://cdn.simpleicons.org/openai/F8F6FF" alt="Логотип OpenAI / ChatGPT"></div>
+      <div class="activity-copy"><h3>Пишу ChatGPT</h3><p>Идеи и разработка VEXOR</p></div>
+    </a>
+  </div>
+</section>
 <main>
 <section class="hero wrap" id="home"><div class="eyebrow">MINECRAFT JAVA CLIENT</div><h1>ENTER THE<br><span class="gradient">VEXOR WORLD.</span></h1><p class="lead">Неоновый Minecraft Java клиент, который мы создаём с нуля. ESP, движение, визуалы и собственный HUD — всё в одном интерфейсе.</p><div class="buttons"><a class="btn main" href="#downloads">Загрузки ↓</a><a class="btn" href="#features">Изучить функции ↗</a></div><div class="free">✓ Сайт бесплатно · Без регистрации для посетителей</div><p class="small">Клиент находится в разработке. Не все функции уже реализованы.</p></section>
 <section class="wrap" id="features"><h2 class="title">Функции клиента</h2><p class="desc">Запланированные разделы VEXOR CLIENT для Minecraft Java Edition.</p><div class="grid">
